@@ -6,13 +6,7 @@ import Form from "./components/Form";
 const App = () => (
   <Grommet theme={frontityTheme}>
     <Box fill justify="center" direction="row" wrap>
-      <Box
-        gap="large"
-        justify="start"
-        direction="column"
-        width="460px"
-        margin="medium"
-      >
+      <Box gap="large" justify="start" direction="column" width="100%">
         <Form />
       </Box>
     </Box>
