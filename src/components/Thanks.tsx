@@ -10,7 +10,7 @@ const Thanks = () => (
     elevation="small"
     background="white"
   >
-    <Heading>Thanks!</Heading>
+    <Heading>Big Thanks!</Heading>
     We will send you an email when the alpha is ready 💪🤗
   </Box>
 );
