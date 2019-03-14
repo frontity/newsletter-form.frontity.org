@@ -1,6 +1,10 @@
 {
   "version": 2,
   "name": "newsletter-form.frontity.org",
+  "alias": ["newsletter-form.frontity.org"],
+  "env": {
+    "INLINE_RUNTIME_CHUNK": false
+  },
   "builds": [
     {
       "src": "package.json",
