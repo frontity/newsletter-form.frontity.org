@@ -3,7 +3,7 @@
   "name": "newsletter-form.frontity.org",
   "alias": ["newsletter-form.frontity.org"],
   "env": {
-    "INLINE_RUNTIME_CHUNK": false
+    "INLINE_RUNTIME_CHUNK": "false"
   },
   "builds": [
     {
