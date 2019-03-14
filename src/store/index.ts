@@ -7,32 +7,32 @@ const state: {
     email: string;
     role: string;
   };
-  feedback: {
+  afterNewsletter: {
     question1: string;
   };
   sending: {
     newsletter: boolean;
-    feedback: boolean;
+    afterNewsletter: boolean;
   };
   sent: {
     newsletter: boolean;
-    feedback: boolean;
+    afterNewsletter: boolean;
   };
 } = {
   newsletter: {
     email: "",
     role: ""
   },
-  feedback: {
+  afterNewsletter: {
     question1: ""
   },
   sending: {
     newsletter: false,
-    feedback: false
+    afterNewsletter: false
   },
   sent: {
     newsletter: false,
-    feedback: false
+    afterNewsletter: false
   }
 };
 

@@ -3,7 +3,7 @@ import { Grommet, Box } from "grommet";
 import frontityTheme from "./theme";
 import useStore from "./store";
 import Newsletter from "./components/Newsletter";
-import Feedback from "./components/Feedback";
+import AfterNewsletter from "./components/AfterNewsletter";
 import Thanks from "./components/Thanks";
 
 const App = () => {
@@ -13,8 +13,10 @@ const App = () => {
       <Box fill justify="center" direction="row" wrap>
         <Box gap="large" justify="start" direction="column" width="100%">
           {!state.sent.newsletter && <Newsletter />}
-          {state.sent.newsletter && !state.sent.feedback && <Feedback />}
-          {state.sent.newsletter && state.sent.feedback && <Thanks />}
+          {state.sent.newsletter && !state.sent.afterNewsletter && (
+            <AfterNewsletter />
+          )}
+          {state.sent.newsletter && state.sent.afterNewsletter && <Thanks />}
         </Box>
       </Box>
     </Grommet>

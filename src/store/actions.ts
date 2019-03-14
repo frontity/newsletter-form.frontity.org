@@ -7,11 +7,11 @@ export const setNewsletterProp: Action<{
   state.newsletter[name] = value;
 };
 
-export const setFeedbackProp: Action<{
+export const setAfterNewsletterProp: Action<{
   name: "question1";
   value: string;
 }> = ({ state }, { name, value }) => {
-  state.feedback[name] = value;
+  state.afterNewsletter[name] = value;
 };
 
 export const sendNewsletter: Action = async ({ state }) => {
@@ -28,16 +28,16 @@ export const sendNewsletter: Action = async ({ state }) => {
   state.sent.newsletter = true;
 };
 
-export const sendFeedback: Action = async ({ state }) => {
-  state.sending.feedback = true;
+export const sendAfterNewsletter: Action = async ({ state }) => {
+  state.sending.afterNewsletter = true;
   const res = await fetch(
     "https://hook.integromat.com/8rj7y4krrbqkcpr9tmtyfhk629wp9q8h",
     {
       method: "post",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(state.feedback)
+      body: JSON.stringify(state.afterNewsletter)
     }
   );
-  state.sending.feedback = false;
-  state.sent.feedback = true;
+  state.sending.afterNewsletter = false;
+  state.sent.afterNewsletter = true;
 };

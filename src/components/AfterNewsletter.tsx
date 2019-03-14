@@ -3,14 +3,14 @@ import { Box, TextInput, FormField, Button } from "grommet";
 import Icon from "./Icon";
 import useStore from "../store";
 
-const Feedback = () => {
+const AfterNewsletter = () => {
   const { state, actions } = useStore();
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    actions.sendFeedback();
+    actions.sendAfterNewsletter();
   };
   return (
-    <form id="feedback" onSubmit={onSubmit}>
+    <form id="after-newsletter" onSubmit={onSubmit}>
       <Box
         gap="small"
         pad="40px"
@@ -24,9 +24,9 @@ const Feedback = () => {
             id="question1"
             required
             placeholder="Answer to question 1"
-            value={state.feedback.question1}
+            value={state.afterNewsletter.question1}
             onChange={e => {
-              actions.setFeedbackProp({
+              actions.setAfterNewsletterProp({
                 name: "question1",
                 value: e.target.value
               });
@@ -39,7 +39,7 @@ const Feedback = () => {
             primary
             color="brand"
             label="Finish"
-            disabled={state.sending.feedback}
+            disabled={state.sending.afterNewsletter}
             icon={<Icon />}
             type="submit"
           />
@@ -49,4 +49,4 @@ const Feedback = () => {
   );
 };
 
-export default Feedback;
+export default AfterNewsletter;
