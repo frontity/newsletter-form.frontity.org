@@ -1,5 +1,18 @@
 import { Action } from "overmind";
 
+type DataLayer = {
+  event: string;
+  [key: string]: string;
+};
+
+declare global {
+  interface Window {
+    dataLayer: DataLayer[];
+  }
+}
+
+const dataLayer = window.dataLayer || [];
+
 export const setNewsletterProp: Action<{
   name: "email" | "role";
   value: string;
@@ -24,6 +37,10 @@ export const sendNewsletter: Action = async ({ state }) => {
       body: JSON.stringify(state.newsletter)
     }
   );
+  dataLayer.push({
+    event: "newsletter",
+    ...state.newsletter
+  });
   state.sending.newsletter = false;
   state.sent.newsletter = true;
 };
@@ -38,6 +55,10 @@ export const sendAfterNewsletter: Action = async ({ state }) => {
       body: JSON.stringify(state.afterNewsletter)
     }
   );
+  dataLayer.push({
+    event: "after-newsletter",
+    ...state.afterNewsletter
+  });
   state.sending.afterNewsletter = false;
   state.sent.afterNewsletter = true;
 };
