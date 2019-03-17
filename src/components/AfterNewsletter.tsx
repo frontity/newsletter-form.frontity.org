@@ -1,5 +1,5 @@
 import React, { FormEvent } from "react";
-import { Box, TextInput, FormField, Button } from "grommet";
+import { Box, TextInput, FormField, Button, RadioButton } from "grommet";
 import Icon from "./Icon";
 import useStore from "../store";
 
@@ -19,19 +19,35 @@ const AfterNewsletter = () => {
         elevation="small"
         background="white"
       >
-        <FormField label="FEEDBACK QUESTION 1" htmlFor="question1">
+        <FormField label="Your Name" htmlFor="name">
           <TextInput
-            id="question1"
+            id="name"
             required
-            placeholder="Answer to question 1"
-            value={state.afterNewsletter.question1}
+            placeholder="John"
+            value={state.afterNewsletter.name}
             onChange={e => {
               actions.setAfterNewsletterProp({
-                name: "question1",
+                name: "name",
                 value: e.target.value
               });
             }}
             size="small"
+          />
+        </FormField>
+        <FormField label="What do you use WordPress for?" htmlFor="wp-use">
+          <RadioButton
+            name="wp-use"
+            id="wp-use"
+            required
+            checked={false}
+            label="Personal projects"
+          />
+          <RadioButton
+            name="wp-use"
+            id="wp-use"
+            required
+            checked={false}
+            label="Professional projects"
           />
         </FormField>
         <Box align="stretch" elevation="small" round="8px">

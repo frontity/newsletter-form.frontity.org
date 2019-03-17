@@ -21,7 +21,7 @@ export const setNewsletterProp: Action<{
 };
 
 export const setAfterNewsletterProp: Action<{
-  name: "question1";
+  name: "name";
   value: string;
 }> = ({ state }, { name, value }) => {
   state.afterNewsletter[name] = value;

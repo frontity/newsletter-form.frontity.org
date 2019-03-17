@@ -8,7 +8,7 @@ const state: {
     role: string;
   };
   afterNewsletter: {
-    question1: string;
+    name: string;
   };
   sending: {
     newsletter: boolean;
@@ -24,14 +24,14 @@ const state: {
     role: ""
   },
   afterNewsletter: {
-    question1: ""
+    name: ""
   },
   sending: {
     newsletter: false,
     afterNewsletter: false
   },
   sent: {
-    newsletter: false,
+    newsletter: true,
     afterNewsletter: false
   }
 };
