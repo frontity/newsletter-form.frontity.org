@@ -1,6 +1,7 @@
 import React, { FormEvent } from "react";
-import { Box, TextInput, FormField, Button, RadioButton } from "grommet";
+import { Box, TextInput, FormField, Button } from "grommet";
 import Icon from "./Icon";
+import Question from "./Question";
 import useStore from "../store";
 
 const AfterNewsletter = () => {
@@ -34,22 +35,9 @@ const AfterNewsletter = () => {
             size="small"
           />
         </FormField>
-        <FormField label="What do you use WordPress for?" htmlFor="wp-use">
-          <RadioButton
-            name="wp-use"
-            id="wp-use"
-            required
-            checked={false}
-            label="Personal projects"
-          />
-          <RadioButton
-            name="wp-use"
-            id="wp-use"
-            required
-            checked={false}
-            label="Professional projects"
-          />
-        </FormField>
+        {state.afterNewsletter.questions.map((q, index) => (
+          <Question key={q.name} index={index} />
+        ))}
         <Box align="stretch" elevation="small" round="8px">
           <Button
             primary
