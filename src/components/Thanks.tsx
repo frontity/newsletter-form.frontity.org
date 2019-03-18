@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading } from "grommet";
+import { Box, Heading, Text, Button } from "grommet";
 
 const Thanks = () => (
   <Box
@@ -11,7 +11,8 @@ const Thanks = () => (
     background="white"
   >
     <Heading>Big Thanks!</Heading>
-    We will send you an email when the alpha is ready 💪🤗
+    <Text>We will send you an email when the alpha is ready 💪🤗</Text>
+    <Button primary color="brand" label="Join our community" />
   </Box>
 );
 

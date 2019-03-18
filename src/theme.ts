@@ -24,7 +24,19 @@ export default {
   },
   formField: {
     border: "none",
-    label: {}
+    margin: { bottom: "0" },
+    label: {
+      margin: { vertical: "0", horizontal: "0", bottom: "8px" }
+    },
+    extend: css`
+      & > label {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+    `
   },
   textInput: {
     extend: css`
@@ -64,15 +76,15 @@ export default {
         fontSize ? `font-size: ${fontSize};` : ""}
     `
   },
+  radioButton: {
+    size: "16px"
+  },
   grommet: {
     extend: css`
-      label {
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 20px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-      }
+    & > label {
+      font-size: 16px;
+      line-height: 24px;
+    }
     `
   }
 };
