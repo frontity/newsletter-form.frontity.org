@@ -13,7 +13,7 @@ const AfterNewsletter = () => {
   return (
     <form id="after-newsletter" onSubmit={onSubmit}>
       <Box
-        gap="small"
+        gap="40px"
         pad="40px"
         round="xsmall"
         align="stretch"
