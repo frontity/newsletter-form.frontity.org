@@ -2,7 +2,7 @@ import { Action } from "overmind";
 
 type DataLayer = {
   event: string;
-  [key: string]: string;
+  [key: string]: any;
 };
 
 declare global {
@@ -25,6 +25,14 @@ export const setAfterNewsletterProp: Action<{
   value: string;
 }> = ({ state }, { name, value }) => {
   state.afterNewsletter[name] = value;
+};
+
+export const setAnswer: Action<{
+  name: string;
+  answer: string;
+}> = ({ state }, { name, answer }) => {
+  const question = state.afterNewsletter.questions.find(q => q.name === name);
+  if (question) question.answer = answer;
 };
 
 export const sendNewsletter: Action = async ({ state }) => {
