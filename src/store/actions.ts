@@ -29,14 +29,14 @@ export const setAfterNewsletterProp: Action<{
 
 export const sendNewsletter: Action = async ({ state }) => {
   state.sending.newsletter = true;
-  const res = await fetch(
-    "https://hook.integromat.com/oo3wukwvderm5721fhhq12x3whqrpa2e",
-    {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(state.newsletter)
-    }
-  );
+  // const res = await fetch(
+  //   "https://hook.integromat.com/oo3wukwvderm5721fhhq12x3whqrpa2e",
+  //   {
+  //     method: "post",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(state.newsletter)
+  //   }
+  // );
   dataLayer.push({
     event: "newsletter",
     ...state.newsletter
@@ -47,18 +47,18 @@ export const sendNewsletter: Action = async ({ state }) => {
 
 export const sendAfterNewsletter: Action = async ({ state }) => {
   state.sending.afterNewsletter = true;
-  const res = await fetch(
-    "https://hook.integromat.com/8rj7y4krrbqkcpr9tmtyfhk629wp9q8h",
-    {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(state.afterNewsletter)
-    }
-  );
+  // const res = await fetch(
+  //   "https://hook.integromat.com/8rj7y4krrbqkcpr9tmtyfhk629wp9q8h",
+  //   {
+  //     method: "post",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(state.afterNewsletter)
+  //   }
+  // );
   dataLayer.push({
     event: "after-newsletter",
     ...state.afterNewsletter
   });
-  state.sending.afterNewsletter = false;
+  state.sending.afterNewsletter = true;
   state.sent.afterNewsletter = true;
 };

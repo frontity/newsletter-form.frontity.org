@@ -31,7 +31,7 @@ const state: {
     afterNewsletter: false
   },
   sent: {
-    newsletter: true,
+    newsletter: false,
     afterNewsletter: false
   }
 };

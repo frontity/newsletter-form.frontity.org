@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Icon = ({ width = 15, height = 12 }) => (
+const Icon = () => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     width="14"
