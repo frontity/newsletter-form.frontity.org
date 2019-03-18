@@ -70,7 +70,6 @@ export default {
         font-size: 14px;
         font-weight: 600;
         line-height: 20px;
-        text-transform: uppercase;
         letter-spacing: 1.5px;
       }
     `
