@@ -34,8 +34,10 @@ export default {
     },
     extend: css`
       & > label[for] {
-        font-size: 14px;
         font-weight: 600;
+      }
+      &.uppercase > label[for] {
+        font-size: 14px;
         line-height: 20px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
