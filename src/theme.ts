@@ -88,6 +88,7 @@ export default {
       label {
         font-size: 16px;
         line-height: 24px;
+        font-weight: normal;
       }
     `
   }
