@@ -32,29 +32,6 @@ const state: {
     name: "",
     questions: [
       {
-        name: "wp-use",
-        label: "What do you use WordPress for?",
-        answer: undefined,
-        options: [
-          {
-            label: "Personal projects",
-            value: "personal"
-          },
-          {
-            label: "Professional projects",
-            value: "professional"
-          },
-          {
-            label: "Both",
-            value: "both"
-          },
-          {
-            label: "I don’t use WP",
-            value: "nothing"
-          }
-        ]
-      },
-      {
         name: "wp-level",
         label: "Level of expertise in WordPress:",
         answer: undefined,
@@ -65,11 +42,11 @@ const state: {
           },
           {
             label: "Basic knowledge",
-            value: "basic-intermediate"
+            value: "basic"
           },
           {
             label: "Intermediate knowledge",
-            value: "intermediate-advanced"
+            value: "intermediate"
           },
           {
             label: "WP ninja!",
@@ -88,11 +65,11 @@ const state: {
           },
           {
             label: "Basic knowledge",
-            value: "basic-intermediate"
+            value: "basic"
           },
           {
             label: "Intermediate knowledge",
-            value: "intermediate-advanced"
+            value: "intermediate"
           },
           {
             label: "React ninja!",
@@ -101,9 +78,9 @@ const state: {
         ]
       },
       {
-        name: "wp-theme-js",
+        name: "wp-theme-with-js",
         label:
-          "Have you ever developed a WordPress theme in React, Vue or Angular?",
+          "Have you built a WP theme in React, Vue or Angular?",
         answer: undefined,
         options: [
           {
@@ -126,7 +103,7 @@ const state: {
             value: "hobby"
           },
           {
-            label: "Personal for-profit project ",
+            label: "Personal for-profit project",
             value: "personal"
           },
           {
@@ -140,6 +117,33 @@ const state: {
           {
             label: "My company’s projects",
             value: "company"
+          }
+        ]
+      },
+      {
+        name: "website-type",
+        label: "On what type of website?",
+        answer: undefined,
+        options: [
+          {
+            label: "Blog or news site",
+            value: "blog-news"
+          },
+          {
+            label: "eCommerce",
+            value: "ecommerce"
+          },
+          {
+            label: "Corporate",
+            value: "corporate"
+          },
+          {
+            label: "Classifieds",
+            value: "classifieds"
+          },
+          {
+            label: "Other",
+            value: "other"
           }
         ]
       },
