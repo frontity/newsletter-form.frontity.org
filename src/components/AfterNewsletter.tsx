@@ -13,31 +13,33 @@ const AfterNewsletter = () => {
   return (
     <form id="after-newsletter" onSubmit={onSubmit}>
       <Box
-        gap="40px"
+        gap="32px"
         pad="40px"
         round="xsmall"
         align="stretch"
         elevation="small"
         background="white"
       >
-        <FormField label="Your Name" htmlFor="name">
-          <TextInput
-            id="name"
-            required
-            placeholder="John"
-            value={state.afterNewsletter.name}
-            onChange={e => {
-              actions.setAfterNewsletterProp({
-                name: "name",
-                value: e.target.value
-              });
-            }}
-            size="small"
-          />
-        </FormField>
-        {state.afterNewsletter.questions.map((q, index) => (
-          <Question key={q.name} index={index} />
-        ))}
+        <Box gap="20px">
+          <FormField label="Your Name" htmlFor="name">
+            <TextInput
+              id="name"
+              required
+              placeholder="John"
+              value={state.afterNewsletter.name}
+              onChange={e => {
+                actions.setAfterNewsletterProp({
+                  name: "name",
+                  value: e.target.value
+                });
+              }}
+              size="small"
+            />
+          </FormField>
+          {state.afterNewsletter.questions.map((q, index) => (
+            <Question key={q.name} index={index} />
+          ))}
+        </Box>
         <Box align="stretch" elevation="small" round="8px">
           <Button
             primary

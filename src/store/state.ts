@@ -45,34 +45,57 @@ const state: {
             value: "professional"
           },
           {
-            label: "Both of them",
+            label: "Both",
             value: "both"
           },
           {
-            label: "I don’t usually use WordPress",
+            label: "I don’t use WP",
             value: "nothing"
           }
         ]
       },
       {
         name: "wp-level",
-        label: "What level of expertise do you have in WordPress?",
+        label: "Level of expertise in WordPress:",
         answer: undefined,
         options: [
           {
-            label: "I don’t have any idea about WordPress",
+            label: "No idea",
             value: "none"
           },
           {
-            label: "I have basic / intermediate knowledge",
+            label: "Basic knowledge",
             value: "basic-intermediate"
           },
           {
-            label: "I have intermediate / advanced knowledge",
+            label: "Intermediate knowledge",
             value: "intermediate-advanced"
           },
           {
-            label: "I am a WordPress ninja!",
+            label: "WP ninja!",
+            value: "expert"
+          }
+        ]
+      },
+      {
+        name: "react-level",
+        label: "Level of expertise in React:",
+        answer: undefined,
+        options: [
+          {
+            label: "React what?",
+            value: "none"
+          },
+          {
+            label: "Basic knowledge",
+            value: "basic-intermediate"
+          },
+          {
+            label: "Intermediate knowledge",
+            value: "intermediate-advanced"
+          },
+          {
+            label: "React ninja!",
             value: "expert"
           }
         ]
@@ -84,50 +107,49 @@ const state: {
         answer: undefined,
         options: [
           {
-            label: "Yes, I have!",
+            label: "Yes",
             value: "yes"
           },
           {
-            label: "No, I've never done that",
+            label: "No",
             value: "no"
           }
         ]
       },
       {
         name: "frontity-use",
-        label: "What would you like to use Frontity for?",
+        label: "What would you use Frontity for?",
         answer: undefined,
         options: [
           {
-            label:
-              "For a hobby / non-profit project, I love learning new technologies",
+            label: "Hobby project",
             value: "hobby"
           },
           {
-            label: "For my personal for-profit project ",
+            label: "Personal for-profit project ",
             value: "personal"
           },
           {
-            label: "I’m a freelance and build sites for others",
+            label: "Freelance projects",
             value: "freelance"
           },
           {
-            label: "It can be useful for the development agency I work for",
+            label: "Development agency projects",
             value: "dev-agency"
           },
           {
-            label: "It can be useful for the company I work for",
+            label: "My company’s projects",
             value: "company"
           }
         ]
       },
       {
         name: "frontity-improve",
-        label: "What are you looking to improve with Frontity?",
+        label: "What are you looking to improve?",
         answer: undefined,
         options: [
           {
-            label: "Site’s performance / load time",
+            label: "Performance",
             value: "performance"
           },
           {
@@ -140,13 +162,11 @@ const state: {
             value: "seo"
           },
           {
-            label:
-              "I am interested in building a web app with React and WordPress",
+            label: "PWA",
             value: "wp-web-app"
           },
           {
-            label:
-              "Nothing in particular, I just want to test it and have fun!",
+            label: "I just want to test :)",
             value: "just-for-fun"
           }
         ]
@@ -157,11 +177,11 @@ const state: {
         answer: undefined,
         options: [
           {
-            label: "In a new project or blog",
+            label: "A new project ",
             value: "new-project"
           },
           {
-            label: "In an existing project or blog",
+            label: "An existing project",
             value: "existing-project"
           }
         ]

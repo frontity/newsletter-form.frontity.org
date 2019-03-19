@@ -12,14 +12,14 @@ const Newsletter = () => {
   return (
     <form id="newsletter" onSubmit={onSubmit}>
       <Box
-        gap="40px"
+        gap="32px"
         pad="40px"
         round="xsmall"
         align="stretch"
         elevation="small"
         background="white"
       >
-        <Box gap="small">
+        <Box gap="20px">
           <FormField label="YOUR EMAIL ADDRESS" htmlFor="email">
             <TextInput
               id="email"

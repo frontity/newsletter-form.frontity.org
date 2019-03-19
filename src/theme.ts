@@ -22,6 +22,10 @@ export default {
       family: "Poppins, sans-serif"
     }
   },
+  font: {
+    size: "16px",
+    height: "24px"
+  },
   formField: {
     border: "none",
     margin: { bottom: "0" },
@@ -29,7 +33,7 @@ export default {
       margin: { vertical: "0", horizontal: "0", bottom: "8px" }
     },
     extend: css`
-      & > label {
+      & > label[for] {
         font-size: 14px;
         font-weight: 600;
         line-height: 20px;
@@ -81,10 +85,10 @@ export default {
   },
   grommet: {
     extend: css`
-    & > label {
-      font-size: 16px;
-      line-height: 24px;
-    }
+      label {
+        font-size: 16px;
+        line-height: 24px;
+      }
     `
   }
 };
