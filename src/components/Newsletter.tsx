@@ -20,7 +20,7 @@ const Newsletter = () => {
         background="white"
       >
         <Box gap="20px">
-          <FormField label="YOUR EMAIL ADDRESS" htmlFor="email">
+          <FormField label="Your email address" htmlFor="email" className="uppercase">
             <TextInput
               id="email"
               type="email"
@@ -37,7 +37,7 @@ const Newsletter = () => {
               size="small"
             />
           </FormField>
-          <FormField label="YOUR ROLE" htmlFor="role">
+          <FormField label="Your role" htmlFor="role" className="uppercase">
             <TextInput
               id="role"
               required
