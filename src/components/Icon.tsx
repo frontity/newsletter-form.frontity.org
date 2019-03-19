@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const Icon = () => (
+const Icon = ({ size }: { size?: number }) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
-    width="14"
-    height="11"
+    width={size || 14}
+    height={size || 11}
     viewBox="0 0 14 11"
   >
     <g fill="currentColor" fillRule="evenodd">
