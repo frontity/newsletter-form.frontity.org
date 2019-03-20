@@ -78,7 +78,7 @@ const state: {
         ]
       },
       {
-        name: "wp-theme-with-js",
+        name: "wp-theme-built-with-js",
         label: "Have you built a WP theme in React, Vue or Angular?",
         answer: undefined,
         options: [
@@ -93,7 +93,7 @@ const state: {
         ]
       },
       {
-        name: "frontity-use",
+        name: "use-frontity-for",
         label: "What would you use Frontity for?",
         answer: undefined,
         options: [
@@ -147,7 +147,7 @@ const state: {
         ]
       },
       {
-        name: "frontity-improve",
+        name: "looking-to-improve",
         label: "What are you looking to improve?",
         answer: undefined,
         options: [
@@ -175,7 +175,7 @@ const state: {
         ]
       },
       {
-        name: "frontity-where",
+        name: "where-to-use-frontity",
         label: "Where would you like to use Frontity?",
         answer: undefined,
         options: [
