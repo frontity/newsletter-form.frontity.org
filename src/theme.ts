@@ -48,7 +48,10 @@ export default {
     },
     font: {
       family: "Poppins, sans-serif",
-      size: "16px",
+      size: "16px"
+    },
+    input: {
+      weight: "normal"
     }
   },
   text: {
