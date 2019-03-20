@@ -43,8 +43,8 @@ const AfterNewsletter = () => {
               }}
             />
           </FormField>
-          {state.afterNewsletter.questions.map((q, index) => (
-            <Question key={q.name} index={index} />
+          {Object.keys(state.afterNewsletter.questions).map(name => (
+            <Question key={name} name={name} />
           ))}
         </Box>
         <Box align="stretch" elevation="small" round="8px">

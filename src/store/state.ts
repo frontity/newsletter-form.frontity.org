@@ -6,14 +6,17 @@ const state: {
   afterNewsletter: {
     name: string;
     questions: {
-      name: string;
-      label: string;
-      answer?: string;
-      options: {
+      [name: string]: {
         label: string;
-        value: string;
-      }[];
-    }[];
+        options: {
+          label: string;
+          value: string;
+        }[];
+      };
+    };
+    answers: {
+      [name: string]: string | undefined;
+    };
   };
   sending: {
     newsletter: boolean;
@@ -30,11 +33,9 @@ const state: {
   },
   afterNewsletter: {
     name: "",
-    questions: [
-      {
-        name: "wp-level",
+    questions: {
+      "wp-level": {
         label: "Level of expertise in WordPress:",
-        answer: undefined,
         options: [
           {
             label: "No idea",
@@ -54,10 +55,8 @@ const state: {
           }
         ]
       },
-      {
-        name: "react-level",
+      "react-level": {
         label: "Level of expertise in React:",
-        answer: undefined,
         options: [
           {
             label: "React what?",
@@ -77,10 +76,8 @@ const state: {
           }
         ]
       },
-      {
-        name: "wp-theme-built-with-js",
+      "wp-theme-built-with-js": {
         label: "Have you built a WP theme in React, Vue or Angular?",
-        answer: undefined,
         options: [
           {
             label: "Yes",
@@ -92,10 +89,8 @@ const state: {
           }
         ]
       },
-      {
-        name: "use-frontity-for",
+      "use-frontity-for": {
         label: "What would you use Frontity for?",
-        answer: undefined,
         options: [
           {
             label: "Hobby project",
@@ -119,10 +114,8 @@ const state: {
           }
         ]
       },
-      {
-        name: "website-type",
+      "website-type": {
         label: "On what type of website?",
-        answer: undefined,
         options: [
           {
             label: "Blog or news site",
@@ -146,10 +139,8 @@ const state: {
           }
         ]
       },
-      {
-        name: "looking-to-improve",
+      "looking-to-improve": {
         label: "What are you looking to improve?",
-        answer: undefined,
         options: [
           {
             label: "Performance",
@@ -174,10 +165,8 @@ const state: {
           }
         ]
       },
-      {
-        name: "where-to-use-frontity",
+      "where-to-use-frontity": {
         label: "Where would you like to use Frontity?",
-        answer: undefined,
         options: [
           {
             label: "A new project ",
@@ -189,7 +178,8 @@ const state: {
           }
         ]
       }
-    ]
+    },
+    answers: {}
   },
   sending: {
     newsletter: false,
