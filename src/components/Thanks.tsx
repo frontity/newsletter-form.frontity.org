@@ -22,11 +22,10 @@ const Thanks = () => (
   >
     <Box gap="10px">
       <Heading level="2" margin="0">
-        Many thanks for taking the time to answer!
+        Thanks for taking the time to answer!
       </Heading>
       <Text>
-        You’ll be the first to hear about our news and updates, including the
-        alpha version. 💪🤗
+        You’ll be the first to hear about our news and alpha version. 💪🤗
       </Text>
       <Text>Here’s what you can do next:</Text>
     </Box>
@@ -73,7 +72,7 @@ const Thanks = () => (
             Get involved
           </Heading>
           <Text>
-            come say hello to the{" "}
+            Come say hello to the{" "}
             <Anchor target="_blank" href="https://community.frontity.org">
               forum
             </Anchor>
