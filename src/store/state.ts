@@ -167,7 +167,7 @@ const state: {
           },
           {
             label: "PWA",
-            value: "wp-web-app"
+            value: "pwa"
           },
           {
             label: "I just want to test :)",
