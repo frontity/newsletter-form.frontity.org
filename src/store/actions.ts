@@ -63,9 +63,11 @@ export const sendAfterNewsletter: Action = async ({ state }) => {
   //     body: JSON.stringify(state.afterNewsletter)
   //   }
   // );
+  const { name, questions } = state.afterNewsletter;
   dataLayer.push({
     event: "after-newsletter",
-    ...state.afterNewsletter
+    name,
+    questions: questions.map(({ name, answer }) => ({ name, answer }))
   });
   state.sending.afterNewsletter = true;
   state.sent.afterNewsletter = true;
