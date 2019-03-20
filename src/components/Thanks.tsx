@@ -22,10 +22,10 @@ const Thanks = () => (
       </Text>
       <Text>Here’s what you can do next:</Text>
     </Box>
-    <Box direction="column" gap="20px">
+    <Box gap="20px">
       <Box direction="row" gap="medium">
         <Box flex={false} width="60px" height="60px" align="center" justify="center" round="full" background="#f7f7f7">
-          <Github color="#444444" size="40px" />
+          <Github color="#1f38c5" size="40px" />
         </Box>
         <Box gap="small">
           <Heading level="3" margin="0">Learn more</Heading>
@@ -34,7 +34,7 @@ const Thanks = () => (
       </Box>
       <Box direction="row" gap="medium">
         <Box flex={false} width="60px" height="60px" align="center" justify="center" round="full" background="#f7f7f7">
-          <Frontity size={30} />
+          <Frontity color="#1f38c5" size={30} />
         </Box>
         <Box gap="small">
           <Heading level="3" margin="0">Get involved</Heading>
@@ -43,7 +43,7 @@ const Thanks = () => (
       </Box>
       <Box direction="row" gap="medium">
         <Box flex={false} width="60px" height="60px" align="center" justify="center" round="full" background="#f7f7f7">
-          <Twitter color="#444444" size="32px" />
+          <Twitter color="#1f38c5" size="32px" />
         </Box>
         <Box gap="small">
           <Heading level="3" margin="0">Tweet about us</Heading>

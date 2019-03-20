@@ -1,5 +1,5 @@
 import React, { FormEvent } from "react";
-import { Box, Text, TextInput, FormField, Button } from "grommet";
+import { Box, Text, TextInput, FormField, Button, Paragraph } from "grommet";
 import Icon from "./Icon";
 import Question from "./Question";
 import useStore from "../store";
@@ -14,7 +14,7 @@ const AfterNewsletter = () => {
     <form id="after-newsletter" onSubmit={onSubmit}>
       <Box
         gap="32px"
-        pad="40px"
+        pad="large"
         round="xsmall"
         align="stretch"
         elevation="small"
@@ -25,7 +25,7 @@ const AfterNewsletter = () => {
           please tell us a little bit more about yourself? Your input will help
           us a lot and it will only take you a minute 😊
         </Text>
-        <Box gap="20px">
+        <Box gap="medium">
           <FormField label="Full Name" htmlFor="name">
             <TextInput
               id="name"

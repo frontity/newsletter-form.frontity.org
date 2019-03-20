@@ -13,13 +13,13 @@ const Newsletter = () => {
     <form id="newsletter" onSubmit={onSubmit}>
       <Box
         gap="32px"
-        pad="40px"
+        pad="large"
         round="xsmall"
         align="stretch"
         elevation="small"
         background="white"
       >
-        <Box gap="20px">
+        <Box gap="medium">
           <FormField label="Your email address" htmlFor="email" className="uppercase">
             <TextInput
               id="email"
@@ -34,7 +34,7 @@ const Newsletter = () => {
                   value: e.target.value
                 });
               }}
-              size="small"
+              size="medium"
             />
           </FormField>
           <FormField label="Your role" htmlFor="role" className="uppercase">
@@ -49,7 +49,7 @@ const Newsletter = () => {
                   value: e.target.value
                 });
               }}
-              size="small"
+              size="medium"
             />
           </FormField>
         </Box>
