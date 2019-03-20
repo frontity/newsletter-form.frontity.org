@@ -79,8 +79,7 @@ const state: {
       },
       {
         name: "wp-theme-with-js",
-        label:
-          "Have you built a WP theme in React, Vue or Angular?",
+        label: "Have you built a WP theme in React, Vue or Angular?",
         answer: undefined,
         options: [
           {
