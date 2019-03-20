@@ -102,7 +102,7 @@ const Thanks = () => (
               href={shareTweet({
                 text:
                   "Just joined @Frontity's mailing list for alpha testing. They're launching an open source framework for building #WordPress themes using #React. ⚛️ Excited to learn more!",
-                url: "https://frontity.org"
+                url: "https://frontity.org/alpha"
               })}
             >
               Tell the world
