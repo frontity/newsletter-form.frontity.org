@@ -38,7 +38,6 @@ const AfterNewsletter = () => {
                   value: e.target.value
                 });
               }}
-              size="small"
             />
           </FormField>
           {state.afterNewsletter.questions.map((q, index) => (
