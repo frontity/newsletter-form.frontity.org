@@ -101,8 +101,9 @@ const Thanks = () => (
               target="_blank"
               href={shareTweet({
                 text:
-                  "Just joined @Frontity's mailing list for alpha testing. They're launching an open source framework for building #WordPress themes using #React. ⚛️ Excited to learn more!",
-                url: "https://frontity.org/alpha"
+                  "Just joined @Frontity's mailing list for alpha testing! They're launching an open source framework for building #WordPress themes with #React. ⚛️ Excited to learn more!",
+                url: "https://frontity.org/alpha",
+                hashtags: "FrontityLaunch"
               })}
             >
               Tell the world
