@@ -1,5 +1,5 @@
 import React, { FormEvent } from "react";
-import { Box, Text, TextInput, FormField, Button, Paragraph } from "grommet";
+import { Box, Text, TextInput, FormField, Button } from "grommet";
 import Icon from "./Icon";
 import Question from "./Question";
 import useStore from "../store";
@@ -21,9 +21,8 @@ const AfterNewsletter = () => {
         background="white"
       >
         <Text>
-          We are very excited that you are interested in Frontity! Could you
-          please tell us a little bit more about yourself? Your input will help
-          us a lot and it will only take you a minute 😊
+          Thanks for your interest in Frontity! Could you tell us a bit more
+          about yourself? Your input will help us a lot! 😊
         </Text>
         <Box gap="medium">
           <FormField label="Full Name" htmlFor="name">
