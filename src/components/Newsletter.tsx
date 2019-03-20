@@ -20,7 +20,7 @@ const Newsletter = () => {
         background="white"
       >
         <Box gap="medium">
-          <FormField label="Your email address" htmlFor="email" className="uppercase">
+          <FormField label="Email address" htmlFor="email" className="uppercase">
             <TextInput
               id="email"
               type="email"
@@ -37,7 +37,7 @@ const Newsletter = () => {
               size="medium"
             />
           </FormField>
-          <FormField label="Your role" htmlFor="role" className="uppercase">
+          <FormField label="Role / Job position" htmlFor="role" className="uppercase">
             <TextInput
               id="role"
               required
@@ -57,7 +57,7 @@ const Newsletter = () => {
           <Button
             primary
             color="brand"
-            label="keep me updated!"
+            label="keep me in the loop!"
             disabled={state.sending.newsletter}
             icon={<Icon />}
             type="submit"

@@ -22,12 +22,12 @@ const Thanks = () => (
   >
     <Box gap="10px">
       <Heading level="2" margin="0">
-        Thanks for taking the time to answer!
+        Thank you!
       </Heading>
       <Text>
-        You’ll be the first to hear about our news and alpha version. 💪🤗
+        You’ll be the first to hear about our news and alpha version. 🚀 Here’s
+        what you can do next:
       </Text>
-      <Text>Here’s what you can do next:</Text>
     </Box>
     <Box gap="20px">
       <Box direction="row" gap="medium">
@@ -69,14 +69,14 @@ const Thanks = () => (
         </Box>
         <Box gap="small">
           <Heading level="3" margin="0">
-            Get involved
+            Join our community
           </Heading>
           <Text>
-            Come say hello to the{" "}
+            Come{' '}
             <Anchor target="_blank" href="https://community.frontity.org">
-              forum
-            </Anchor>
-            , introduce yourself or ask any questions!
+              say hello
+            </Anchor>{' '}
+            or ask any questions!
           </Text>
         </Box>
       </Box>
@@ -94,10 +94,9 @@ const Thanks = () => (
         </Box>
         <Box gap="small">
           <Heading level="3" margin="0">
-            Tweet about us
+            Spread the word
           </Heading>
           <Text>
-            Help us{" "}
             <Anchor
               target="_blank"
               href={shareTweet({
@@ -106,8 +105,9 @@ const Thanks = () => (
                 url: "https://frontity.org"
               })}
             >
-              spread the word!
-            </Anchor>
+              Tell the world
+            </Anchor>{' '}
+            about Frontity!
           </Text>
         </Box>
       </Box>

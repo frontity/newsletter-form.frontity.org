@@ -169,7 +169,7 @@ const state: {
             value: "pwa"
           },
           {
-            label: "I just want to test :)",
+            label: "I just want to test 😊",
             value: "just-for-fun"
           }
         ]

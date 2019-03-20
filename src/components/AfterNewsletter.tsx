@@ -25,8 +25,7 @@ const AfterNewsletter = () => {
             Thanks for your interest in Frontity!
           </Heading>
           <Text>
-            Could you tell us a bit more about yourself? Your input will help us
-            a lot! 😊
+            Could you tell us a bit more about yourself?
           </Text>
         </Box>
         <Box gap="medium">
@@ -34,7 +33,7 @@ const AfterNewsletter = () => {
             <TextInput
               id="name"
               required
-              placeholder="John"
+              placeholder="John Doe"
               value={state.afterNewsletter.name}
               onChange={e => {
                 actions.setAfterNewsletterProp({
