@@ -1,6 +1,7 @@
 import React, { FormEvent } from "react";
-import { Box, TextInput, FormField, Button } from "grommet";
+import { Box, Text, TextInput, FormField, Button, Heading } from "grommet";
 import Icon from "./Icon";
+import Question from "./Question";
 import useStore from "../store";
 
 const AfterNewsletter = () => {
@@ -12,28 +13,40 @@ const AfterNewsletter = () => {
   return (
     <form id="after-newsletter" onSubmit={onSubmit}>
       <Box
-        gap="small"
-        pad="40px"
+        gap="32px"
+        pad="large"
         round="xsmall"
         align="stretch"
         elevation="small"
         background="white"
       >
-        <FormField label="FEEDBACK QUESTION 1" htmlFor="question1">
-          <TextInput
-            id="question1"
-            required
-            placeholder="Answer to question 1"
-            value={state.afterNewsletter.question1}
-            onChange={e => {
-              actions.setAfterNewsletterProp({
-                name: "question1",
-                value: e.target.value
-              });
-            }}
-            size="small"
-          />
-        </FormField>
+        <Box gap="small">
+          <Heading level="3" margin="0">
+            Thanks for your interest in Frontity!
+          </Heading>
+          <Text>
+            Could you tell us a bit more about yourself?
+          </Text>
+        </Box>
+        <Box gap="medium">
+          <FormField label="Full Name" htmlFor="name">
+            <TextInput
+              id="name"
+              required
+              placeholder="John Doe"
+              value={state.afterNewsletter.name}
+              onChange={e => {
+                actions.setAfterNewsletterProp({
+                  name: "name",
+                  value: e.target.value
+                });
+              }}
+            />
+          </FormField>
+          {Object.keys(state.afterNewsletter.questions).map(name => (
+            <Question key={name} name={name} />
+          ))}
+        </Box>
         <Box align="stretch" elevation="small" round="8px">
           <Button
             primary
