@@ -2,6 +2,7 @@ const state: {
   newsletter: {
     email: string;
     role: string;
+    hasAgreed: boolean;
   };
   afterNewsletter: {
     name: string;
@@ -29,7 +30,8 @@ const state: {
 } = {
   newsletter: {
     email: "",
-    role: ""
+    role: "",
+    hasAgreed: false
   },
   afterNewsletter: {
     name: "",
