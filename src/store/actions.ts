@@ -1,18 +1,5 @@
 import { Action } from "overmind";
 
-type DataLayer = {
-  event: string;
-  [key: string]: any;
-};
-
-declare global {
-  interface Window {
-    dataLayer: DataLayer[];
-  }
-}
-
-const dataLayer = window.dataLayer || [];
-
 export const setNewsletterProp: Action<{
   name: "email" | "role";
   value: string;
@@ -34,17 +21,9 @@ export const setAnswer: Action<{
   state.afterNewsletter.answers[name] = answer;
 };
 
-export const sendNewsletter: Action = async ({ state }) => {
+export const sendNewsletter: Action = async ({ state, effects }) => {
   state.sending.newsletter = true;
-  // const res = await fetch(
-  //   "https://hook.integromat.com/oo3wukwvderm5721fhhq12x3whqrpa2e",
-  //   {
-  //     method: "post",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(state.newsletter)
-  //   }
-  // );
-  dataLayer.push({
+  effects.dataLayer.push({
     event: "newsletter",
     ...state.newsletter
   });
@@ -52,23 +31,14 @@ export const sendNewsletter: Action = async ({ state }) => {
   state.sent.newsletter = true;
 };
 
-export const sendAfterNewsletter: Action = async ({ state }) => {
-  state.sending.afterNewsletter = true;
-  // const res = await fetch(
-  //   "https://hook.integromat.com/8rj7y4krrbqkcpr9tmtyfhk629wp9q8h",
-  //   {
-  //     method: "post",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(state.afterNewsletter)
-  //   }
-  // );
+export const sendAfterNewsletter: Action = async ({ state, effects }) => {
   const { name, answers } = state.afterNewsletter;
-  
-  dataLayer.push({
+  state.sending.afterNewsletter = true;
+  effects.dataLayer.push({
     event: "after-newsletter",
     name,
     answers,
   });
-  state.sending.afterNewsletter = true;
+  state.sending.afterNewsletter = false;
   state.sent.afterNewsletter = true;
 };
