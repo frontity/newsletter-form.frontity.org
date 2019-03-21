@@ -1,5 +1,13 @@
-import React, { FormEvent } from "react";
-import { Box, TextInput, FormField, Button } from "grommet";
+import React, { ChangeEvent, FormEvent } from "react";
+import {
+  Box,
+  TextInput,
+  FormField,
+  Button,
+  CheckBox,
+  Text,
+  Anchor
+} from "grommet";
 import Icon from "./Icon";
 import useStore from "../store";
 
@@ -20,7 +28,7 @@ const Newsletter = () => {
         background="white"
       >
         <Box gap="medium">
-          <FormField label="Email address" htmlFor="email" className="uppercase">
+          <FormField label="Email address" htmlFor="email">
             <TextInput
               id="email"
               type="email"
@@ -37,7 +45,7 @@ const Newsletter = () => {
               size="medium"
             />
           </FormField>
-          <FormField label="Role / Job position" htmlFor="role" className="uppercase">
+          <FormField label="Role / Job position" htmlFor="role">
             <TextInput
               id="role"
               required
@@ -53,15 +61,36 @@ const Newsletter = () => {
             />
           </FormField>
         </Box>
-        <Box align="stretch" elevation="small" round="8px">
-          <Button
-            primary
-            color="brand"
-            label="keep me in the loop!"
-            disabled={state.sending.newsletter}
-            icon={<Icon />}
-            type="submit"
+        <Box gap="small">
+          <CheckBox
+            label={
+              <Text size="small">
+                I agree to the{" "}
+                <Anchor href="https://frontity.org/privacy-policy">
+                  Privacy Policy
+                </Anchor>
+              </Text>
+            }
+            id="has-agreed"
+            required
+            checked={state.newsletter.hasAgreed}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => {
+              actions.setNewsletterProp({
+                name: "hasAgreed",
+                value: e.target.checked
+              });
+            }}
           />
+          <Box align="stretch" elevation="small" round="8px">
+            <Button
+              primary
+              color="brand"
+              label="keep me in the loop!"
+              disabled={state.sending.newsletter}
+              icon={<Icon />}
+              type="submit"
+            />
+          </Box>
         </Box>
       </Box>
     </form>

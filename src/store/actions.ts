@@ -3,6 +3,9 @@ import { Action } from "overmind";
 export const setNewsletterProp: Action<{
   name: "email" | "role";
   value: string;
+} | {
+  name: "hasAgreed";
+  value: boolean;
 }> = ({ state }, { name, value }) => {
   state.newsletter[name] = value;
 };
