@@ -12,15 +12,15 @@ const Newsletter = () => {
   return (
     <form id="newsletter" onSubmit={onSubmit}>
       <Box
-        gap="40px"
-        pad="40px"
+        gap="32px"
+        pad="large"
         round="xsmall"
         align="stretch"
         elevation="small"
         background="white"
       >
-        <Box gap="small">
-          <FormField label="YOUR EMAIL ADDRESS" htmlFor="email">
+        <Box gap="medium">
+          <FormField label="Email address" htmlFor="email" className="uppercase">
             <TextInput
               id="email"
               type="email"
@@ -34,10 +34,10 @@ const Newsletter = () => {
                   value: e.target.value
                 });
               }}
-              size="small"
+              size="medium"
             />
           </FormField>
-          <FormField label="YOUR ROLE" htmlFor="role">
+          <FormField label="Role / Job position" htmlFor="role" className="uppercase">
             <TextInput
               id="role"
               required
@@ -49,7 +49,7 @@ const Newsletter = () => {
                   value: e.target.value
                 });
               }}
-              size="small"
+              size="medium"
             />
           </FormField>
         </Box>
@@ -57,7 +57,7 @@ const Newsletter = () => {
           <Button
             primary
             color="brand"
-            label="keep me updated!"
+            label="keep me in the loop!"
             disabled={state.sending.newsletter}
             icon={<Icon />}
             type="submit"

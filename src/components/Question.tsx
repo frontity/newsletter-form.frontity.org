@@ -2,11 +2,10 @@ import React, { ChangeEvent } from "react";
 import { FormField, RadioButtonGroup } from "grommet";
 import useStore from "../store";
 
-const Question = ({ index }: { index: number }) => {
+const Question = ({ name }: { name: string }) => {
   const { state, actions } = useStore();
-  const { label, name, answer, options } = state.afterNewsletter.questions[
-    index
-  ];
+  const { label, options } = state.afterNewsletter.questions[name];
+  const answer = state.afterNewsletter.answers[name];
   return (
     <FormField label={label} htmlFor={name} required>
       <RadioButtonGroup

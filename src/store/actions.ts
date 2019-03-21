@@ -31,8 +31,7 @@ export const setAnswer: Action<{
   name: string;
   answer: string;
 }> = ({ state }, { name, answer }) => {
-  const question = state.afterNewsletter.questions.find(q => q.name === name);
-  if (question) question.answer = answer;
+  state.afterNewsletter.answers[name] = answer;
 };
 
 export const sendNewsletter: Action = async ({ state }) => {
@@ -63,9 +62,12 @@ export const sendAfterNewsletter: Action = async ({ state }) => {
   //     body: JSON.stringify(state.afterNewsletter)
   //   }
   // );
+  const { name, answers } = state.afterNewsletter;
+  
   dataLayer.push({
     event: "after-newsletter",
-    ...state.afterNewsletter
+    name,
+    answers,
   });
   state.sending.afterNewsletter = true;
   state.sent.afterNewsletter = true;

@@ -6,14 +6,17 @@ const state: {
   afterNewsletter: {
     name: string;
     questions: {
-      name: string;
-      label: string;
-      answer?: string;
-      options: {
+      [name: string]: {
         label: string;
-        value: string;
-      }[];
-    }[];
+        options: {
+          label: string;
+          value: string;
+        }[];
+      };
+    };
+    answers: {
+      [name: string]: string | undefined;
+    };
   };
   sending: {
     newsletter: boolean;
@@ -30,104 +33,117 @@ const state: {
   },
   afterNewsletter: {
     name: "",
-    questions: [
-      {
-        name: "wp-use",
-        label: "What do you use WordPress for?",
-        answer: undefined,
+    questions: {
+      "wp-level": {
+        label: "Level of expertise in WordPress:",
         options: [
           {
-            label: "Personal projects",
-            value: "personal"
-          },
-          {
-            label: "Professional projects",
-            value: "professional"
-          },
-          {
-            label: "Both of them",
-            value: "both"
-          },
-          {
-            label: "I don’t usually use WordPress",
-            value: "nothing"
-          }
-        ]
-      },
-      {
-        name: "wp-level",
-        label: "What level of expertise do you have in WordPress?",
-        answer: undefined,
-        options: [
-          {
-            label: "I don’t have any idea about WordPress",
+            label: "No idea",
             value: "none"
           },
           {
-            label: "I have basic / intermediate knowledge",
-            value: "basic-intermediate"
+            label: "Basic knowledge",
+            value: "basic"
           },
           {
-            label: "I have intermediate / advanced knowledge",
-            value: "intermediate-advanced"
+            label: "Intermediate knowledge",
+            value: "intermediate"
           },
           {
-            label: "I am a WordPress ninja!",
+            label: "WP ninja!",
             value: "expert"
           }
         ]
       },
-      {
-        name: "wp-theme-js",
-        label:
-          "Have you ever developed a WordPress theme in React, Vue or Angular?",
-        answer: undefined,
+      "react-level": {
+        label: "Level of expertise in React:",
         options: [
           {
-            label: "Yes, I have!",
+            label: "React what?",
+            value: "none"
+          },
+          {
+            label: "Basic knowledge",
+            value: "basic"
+          },
+          {
+            label: "Intermediate knowledge",
+            value: "intermediate"
+          },
+          {
+            label: "React ninja!",
+            value: "expert"
+          }
+        ]
+      },
+      "wp-theme-built-with-js": {
+        label: "Have you built a WP theme in React, Vue or Angular?",
+        options: [
+          {
+            label: "Yes",
             value: "yes"
           },
           {
-            label: "No, I've never done that",
+            label: "No",
             value: "no"
           }
         ]
       },
-      {
-        name: "frontity-use",
-        label: "What would you like to use Frontity for?",
-        answer: undefined,
+      "use-frontity-for": {
+        label: "What would you use Frontity for?",
         options: [
           {
-            label:
-              "For a hobby / non-profit project, I love learning new technologies",
+            label: "Hobby project",
             value: "hobby"
           },
           {
-            label: "For my personal for-profit project ",
+            label: "Personal for-profit project",
             value: "personal"
           },
           {
-            label: "I’m a freelance and build sites for others",
+            label: "Freelance projects",
             value: "freelance"
           },
           {
-            label: "It can be useful for the development agency I work for",
+            label: "Development agency projects",
             value: "dev-agency"
           },
           {
-            label: "It can be useful for the company I work for",
+            label: "My company’s projects",
             value: "company"
           }
         ]
       },
-      {
-        name: "frontity-improve",
-        label: "What are you looking to improve with Frontity?",
-        answer: undefined,
+      "website-type": {
+        label: "On what type of website?",
         options: [
           {
-            label: "Site’s performance / load time",
+            label: "Blog or news site",
+            value: "blog-news"
+          },
+          {
+            label: "eCommerce",
+            value: "ecommerce"
+          },
+          {
+            label: "Corporate",
+            value: "corporate"
+          },
+          {
+            label: "Classifieds",
+            value: "classifieds"
+          },
+          {
+            label: "Other",
+            value: "other"
+          }
+        ]
+      },
+      "looking-to-improve": {
+        label: "What are you looking to improve?",
+        options: [
+          {
+            label: "Performance",
             value: "performance"
           },
           {
@@ -140,33 +156,30 @@ const state: {
             value: "seo"
           },
           {
-            label:
-              "I am interested in building a web app with React and WordPress",
-            value: "wp-web-app"
+            label: "PWA",
+            value: "pwa"
           },
           {
-            label:
-              "Nothing in particular, I just want to test it and have fun!",
+            label: "I just want to test 😊",
             value: "just-for-fun"
           }
         ]
       },
-      {
-        name: "frontity-where",
+      "where-to-use-frontity": {
         label: "Where would you like to use Frontity?",
-        answer: undefined,
         options: [
           {
-            label: "In a new project or blog",
+            label: "A new project ",
             value: "new-project"
           },
           {
-            label: "In an existing project or blog",
+            label: "An existing project",
             value: "existing-project"
           }
         ]
       }
-    ]
+    },
+    answers: {}
   },
   sending: {
     newsletter: false,
