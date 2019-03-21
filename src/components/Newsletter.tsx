@@ -65,7 +65,10 @@ const Newsletter = () => {
           <CheckBox
             label={
               <Text size="small">
-                I agree to the <Anchor>Privacy Policy</Anchor>
+                I agree to the{" "}
+                <Anchor href="https://frontity.org/privacy-policy">
+                  Privacy Policy
+                </Anchor>
               </Text>
             }
             id="has-agreed"
