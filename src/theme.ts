@@ -32,7 +32,7 @@ export default {
       "status-error": "#ea5a35",
       focus: "rgba(31, 56, 197, 0.24)",
       text: {
-        light: "#0c112b"
+        light: "rgba(12, 17, 43, .8)"
       }
     },
     edgeSize: {
@@ -88,6 +88,7 @@ export default {
       }
     },
     extend: css`
+      color: #0c112b;
       ${({ as }: { as: string }) =>
         as === "h4"
           ? `
@@ -106,6 +107,7 @@ export default {
     },
     extend: css`
       & > label[for] {
+        color: #0c112b;
         font-weight: 600;
         font-size: 14px;
         line-height: 20px;
