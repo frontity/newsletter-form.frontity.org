@@ -85,7 +85,7 @@ const Newsletter = () => {
             <Button
               primary
               color="brand"
-              label="keep me in the loop!"
+              label="notify me!"
               disabled={state.sending.newsletter}
               icon={<Icon />}
               type="submit"
