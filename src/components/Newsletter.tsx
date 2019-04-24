@@ -32,7 +32,6 @@ const Newsletter = () => {
             <TextInput
               id="email"
               type="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               required
               placeholder="name@example.com"
               value={state.newsletter.email}
