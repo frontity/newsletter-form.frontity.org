@@ -25,7 +25,7 @@ const Thanks = () => (
         Thank you!
       </Heading>
       <Text>
-        You’ll be the first to hear about our news and beta version. 🚀 Here’s
+        You’ll be the first to hear about our news and updates. 🚀 Here’s
         what you can do next:
       </Text>
     </Box>
@@ -101,7 +101,7 @@ const Thanks = () => (
               target="_blank"
               href={shareTweet({
                 text:
-                  "Just joined @Frontity's mailing list for beta testing! They're launching an open source framework for building #WordPress themes with #React. ⚛️ Excited to learn more!",
+                  "⚛ @Frontity is a free and open source framework for building #WordPress themes using #React. Check it out!",
                 url: "https://frontity.org/beta",
                 hashtags: "FrontityLaunch"
               })}
