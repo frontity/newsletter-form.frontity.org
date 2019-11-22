@@ -102,8 +102,8 @@ const Thanks = () => (
               href={shareTweet({
                 text:
                   "⚛ @Frontity is a free and open source framework for building #WordPress themes using #React. Check it out!",
-                url: "https://frontity.org/beta",
-                hashtags: "FrontityLaunch"
+                url: "https://frontity.org",
+                hashtags: "Frontity"
               })}
             >
               Tell the world
